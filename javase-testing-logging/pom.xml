@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+    xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <groupId>com.github.codeteapot.testing</groupId>
+        <artifactId>javase-testing</artifactId>
+        <version>0.1.1-SNAPSHOT</version>
+    </parent>
+    
+    <artifactId>javase-testing-logging</artifactId>
+    <packaging>pom</packaging>
+    
+    <name>JavaSE Testing Logging</name>
+    <description>Testing tools for Java Standard Edition loggers</description>
+    <url>https://github.com/codeteapot/javase-testing</url>
+    
+    <modules>
+        <module>javase-testing-logging-core</module>
+        <module>javase-testing-logging-hamcrest</module>
+        <module>javase-testing-logging-junit-jupiter</module>
+    </modules>
+    
+    <reporting>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <reportSets>
+                    <reportSet>
+                        <id>default</id>
+                        <reports>
+                            <!--report>javadoc</report-->
+                            <!--report>test-javadoc</report-->
+                        </reports>
+                    </reportSet>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <inherited>false</inherited>
+                        <reports>
+                            <report>aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+
+        </plugins>
+    </reporting>
+    
+</project>

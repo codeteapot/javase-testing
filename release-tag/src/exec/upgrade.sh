@@ -9,17 +9,24 @@ then
   exit 1
 fi
 
+git_version_replace() {
+  local prev_version=$1
+  local next_version=$2 
+  
+  git grep -l "$prev_version" -- '*pom.xml' | xargs \
+  sed -i "s/<version>$prev_version<\/version>/<version>$next_version<\/version>/g"
+  git grep -l "$prev_version" -- '*.md' | xargs \
+  sed -i "s/$prev_version/$next_version/g"
+  git add .
+  git commit -m "Release v$new_version"
+}
+
 pushd ..
 
-git grep -l "$old_version" | xargs sed -i "s/$old_version/$new_version/g"
-git add .
-git commit -m "Release v$new_version"
+git_version_replace "$old_version" "$new_version"
 git tag "v$new_version"
 git reset HEAD~1
 git checkout -- .
-
-git grep -l "$old_version" | xargs sed -i "s/$old_version/$new_version-SNAPSHOT/g"
-git add .
-git commit -m "Release v$new_version"
+git_version_replace "$old_version" "$new_version-SNAPSHOT"
 
 popd

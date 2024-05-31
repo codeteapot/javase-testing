@@ -9,7 +9,7 @@
     <parent>
         <groupId>com.github.codeteapot.testing</groupId>
         <artifactId>javase-testing-logging</artifactId>
-        <version>0.1.3-SNAPSHOT</version>
+        <version>0.1.4</version>
     </parent>
     
     <artifactId>javase-testing-logging-junit-jupiter</artifactId>

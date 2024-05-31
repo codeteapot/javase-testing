@@ -1,9 +1,9 @@
-name: Publish
+name: Release Delivery
 
 on:
 
   release:
-    types: [published]
+    types: [ published ]
       
 jobs:
 

@@ -44,5 +44,5 @@ git reset HEAD~1
 git checkout -- .
 git_version_replace $new_version-SNAPSHOT
 
-git push origin main
-git push origin v$new_version
+#git push origin main
+#git push origin v$new_version

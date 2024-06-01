@@ -3,5 +3,5 @@
 
 # JavaSE Testing
 
-Visit [project site](https://codeteapot.github.io/javase-testing/v0.1.6-SNAPSHOT) to see full
+Visit [project site](https://codeteapot.github.io/javase-testing/v0.1.7-SNAPSHOT) to see full
 documentation.

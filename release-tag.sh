@@ -38,10 +38,11 @@ git_version_replace() {
   git commit -m "Release v$new_version"
 }
 
+git checkout -b release/$new_version
 git_version_replace $new_version
 git tag v$new_version
-git reset HEAD~1
-git checkout -- .
+
+git checkout main
 git_version_replace $new_version-SNAPSHOT
 
 #git push origin main

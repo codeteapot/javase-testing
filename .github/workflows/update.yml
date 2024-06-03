@@ -42,7 +42,7 @@ jobs:
           git config --global user.email codeteapot@gmail.com
           
           mvn -B -DskipTests install
-          mvn -B -Pdocumentation site-deploy
+          mvn -B -Pgithub site-deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   

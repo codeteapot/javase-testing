@@ -510,7 +510,7 @@
         </profile>
         <profile>
         
-            <id>documentation</id>
+            <id>github</id>
             
             <distributionManagement>
                 <site>
@@ -558,7 +558,7 @@
                         <version>3.0.0</version>
                         <executions>
                             <execution>
-                                <id>site-deploy</id>
+                                <id>gh-pages</id>
                                 <goals>
                                     <goal>publish-scm</goal>
                                 </goals>
@@ -586,7 +586,7 @@
                             <artifactId>maven-scm-publish-plugin</artifactId>
                             <executions>
                                 <execution>
-                                    <id>site-deploy</id>
+                                    <id>gh-pages</id>
                                     <goals>
                                         <goal>publish-scm</goal>
                                     </goals>
